@@ -12,7 +12,7 @@ jobs:
   manual-build-and-push:
     runs-on: ubuntu-latest
     env:
-      IMAGE_TAG: ${{ github.event.inputs.region }}
+      IMAGE_TAG: ${{ github.event.inputs.tag }}
     steps:
       - name: Checkout
         run: echo ${{ env.IMAGE_TAG }}
