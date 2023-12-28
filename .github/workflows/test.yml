@@ -1,0 +1,16 @@
+name: Manual version Build and Push for RC
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'ECR Tag'
+        type: string
+        required: true
+
+jobs:
+  manual-build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
